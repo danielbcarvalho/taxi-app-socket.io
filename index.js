@@ -23,8 +23,8 @@ io.on('connection', (socket) => {
     taxiSocket = socket; 
   })
 
-  socket.on('acceptedRide', (driverLocation) => {
-    passengerSocket.emit('acceptedRide', driverLocation)
+  socket.on('driverLocation', (driverLocation) => {
+    passengerSocket.emit('driverLocation', driverLocation)
   });
 });
 
